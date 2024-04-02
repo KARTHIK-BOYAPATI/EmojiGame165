@@ -1,32 +1,28 @@
+// Write your code here.
 import './index.css'
 
 const NavBar = props => {
-  const {score, topScore, isGameOver} = props
-
-  const NavBarScore = () => {
-    if (isGameOver) {
-      return null
-    }
-    return (
-      <div className="Scores-Container">
-        <p className="Score-Heading">Score: {score}</p>
-        <p>Top Score: {topScore}</p>
-      </div>
-    )
-  }
+  const {currentScore, isGameInProgress, topScore} = props
 
   return (
-    <div className="Nav-Container">
-      <div className="Logo-Container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
-          alt="emoji logo"
-          className="emoji-logo"
-        />
-        <h1 className="Main-Heading">Emoji Game</h1>
+    <nav className="nav-container">
+      <div className="main-container">
+        <div className="logo-title-container">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
+            className="logo"
+            alt="emoji logo"
+          />
+          <h1 className="title">Emoji Game</h1>
+        </div>
+        {isGameInProgress && (
+          <div className="scores-container">
+            <p className="score">Score: {currentScore}</p>
+            <p className="score">Top Score: {topScore}</p>
+          </div>
+        )}
       </div>
-      <div>{NavBarScore()}</div>
-    </div>
+    </nav>
   )
 }
 

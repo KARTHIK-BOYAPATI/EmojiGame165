@@ -1,31 +1,61 @@
-.Nav-Container {
+/* Write your code here. */
+.nav-container {
   display: flex;
-  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
-  color: #ffffff;
-  font-weight: bold;
+  justify-content: center;
+  background-color: #ffffff33;
+  padding: 8px;
+}
+
+.main-container {
+  display: flex;
   justify-content: space-between;
-  padding: 10px;
+  flex-basis: 80%;
+  max-width: 1000px;
 }
 
-.Main-Heading {
-  font-size: medium;
-  margin-left: 10px;
+.logo-title-container {
+  display: flex;
+  align-items: center;
 }
 
-.emoji-logo {
-  margin-left: 50px;
+.logo {
+  width: 24px;
 }
 
-.Logo-Container {
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 48px;
+  }
+}
+
+.title {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.scores-container {
   display: flex;
 }
 
-.Scores-Container {
-  display: flex;
-  margin-right: 50px;
-  font-size: large;
+.score {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 16px;
 }
 
-.Score-Heading {
-  margin-right: 20px;
+@media screen and (min-width: 768px) {
+  .score {
+    font-size: 24px;
+    margin-left: 32px;
+  }
 }
